@@ -1,0 +1,19 @@
+
+# Mechanism of perspecrive patent analysis teqniqes for enterprises in the field of fleet management
+
+# Structure and methods
+
+Figure \@ref(fig:ppract) shows the place of prospective patent research in the life cycle of commercial products. Prospective patent research (PPR) is a tool for strategic planning of R&D at the enterprises of science-intensive industries, which is a set of works providing forecasting the competitiveness of the research object relative to the world level on the basis of patent and other information and focused on the commercialization of the results of intellectual activity in the entrepreneurial sector of the economy. The development of the organizational and economic mechanism of PPR will increase the efficiency of planning at the initial stage of research and substantiation of development, as well as at the stage of experimental design work. 
+
+```{r ppract, echo=FALSE, fig.pos= "h", out.extra = '', out.width='80%', fig.align = "center", fig.cap='Perspective patent research (PPR) activities'}
+knitr::include_graphics('figure/Promising_patent_research.pdf')
+```
+
+
+\clearpage
+
+
+## Figures
+
+
+

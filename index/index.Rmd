@@ -1,0 +1,115 @@
+---
+author: 'Your R. Name'
+date: 'May 20xx'
+institution: 'Reed College'
+division: 'Mathematics and Natural Sciences'
+advisor: 'Advisor F. Name'
+# If you have more two advisors, un-silence line 7
+#altadvisor: 'Your Other Advisor'
+department: 'Mathematics'
+degree: 'Bachelor of Arts'
+title: 'My Final College Paper'
+knit: "bookdown::render_book"
+site: bookdown::bookdown_site
+output: 
+  thesisdown::thesis_pdf: default
+#  thesisdown::thesis_gitbook: default
+#  thesisdown::thesis_word: default
+#  thesisdown::thesis_epub: default
+# If you are creating a PDF you'll need to write your preliminary content (e.g., abstract, acknowledgements) here or
+# use code similar to line 22-23 for the .RMD files. If you are NOT producing a PDF, you can delete or silence lines 21-32 in this YAML header.
+abstract: |
+  `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), collapse = '\n  ')`
+# If you'd rather include the preliminary content in files instead of inline
+# like below, use a command like that for the abstract above.  Note that a tab is 
+# needed on the line after the `|`.
+acknowledgements: |
+  I want to thank a few people.
+dedication: |
+  You can have a dedication here if you wish. 
+preface: |
+  This is an example of a thesis setup to use the reed thesis document class
+  (for LaTeX) and the R bookdown package, in general.
+# Specify the location of the bibliography below
+bibliography: bib/thesis.bib
+# Download your specific csl file and refer to it in the line below.
+csl: csl/apa.csl
+lot: true
+lof: true
+# If you prefer blank lines between paragraphs, un-silence lines  40-41 (this requires package tikz)
+#header-includes:
+#- \usepackage{tikz}
+---
+
+<!--
+Above is the YAML (YAML Ain't Markup Language) header that includes a lot of metadata used to produce the document.  Be careful with spacing in this header!
+
+If you'd prefer to not include a Dedication, for example, simply delete the section entirely, or silence (add #) them. 
+
+If you have other LaTeX packages you would like to include, delete the # before header-includes and list the packages after hyphens on new lines.
+
+If you'd like to include a comment that won't be produced in your resulting file enclose it in a block like this.
+
+If you receive a duplicate label error after knitting, make sure to delete the index.Rmd file and then knit again.
+-->
+
+```{r include_packages, include = FALSE}
+# This chunk ensures that the thesisdown package is
+# installed and loaded. This thesisdown package includes
+# the template files for the thesis.
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+if(!require(thesisdown))
+  devtools::install_github("ismayc/thesisdown")
+library(thesisdown)
+```
+
+<!-- On ordering the chapter files:
+There are two options:
+1. Name your chapter files in the order in which you want them to appear (e.g., 01-Inro, 02-Data, 03-Conclusions). 
+2. Otherwise, you can specify the order in which they appear in the _bookdown.yml (for PDF only).
+
+Do not include 00(two-hyphens)prelim.Rmd and 00-abstract.Rmd in the YAML file--they are handled in the YAML above differently for the PDF version.
+-->
+
+<!-- The {.unnumbered} option here means that the introduction will be "Chapter 0." You can also use {-} for no numbers
+on chapters.
+-->
+
+# Introduction {.unnumbered}
+
+## Background {.unnumbered}
+
+Starting from the second half of the 20th century, the development of high technologies in various industries and the production of a fundamentally new high-tech products have become critical factors in sustainable economic growth for most industrialized countries of the world. The rapid development of science and technology, global political and technological transformations led to dramatic changes in the international economic system, and in the XXI century, the world economy entered a new phase of its development, turning into a knowledge economy, the main driving force of which was knowledge-intensive technology. Most of these tendencies are changing the future of the companies, operation in the automotive industry.
+
+The relevance of the study is emerging due to economic problems in the development of scientific and production enterprises of the automotive industry under intense-changing prevailing conditions happening on the market. The specifics of the activities of these enterprises is the need for a rational combination and balanced development of automotive equipment and technologies used, specifically in the interests of strengthening competitive positions in the international market of automotive and logistics services by commercializing the results of Research and Development (R&D) outcomes as part of the implementation of business agreements between interested parties.
+
+Apparently, the cost-effective functioning of automotive industry enterprises is possible due to the strategic planning of R&D, taking into account the potential of innovation and commercialization of the created technologies in the entrepreneurial sector of the economy. The most crucial tool for strategic planning of R&D is prospective patent research. Based on the forecast of development trends of scientific and technical areas and objects of technology, it allows us to substantiate target criteria for efficiency and product requirements and evaluate its technical level. Prospective patent research also supports the generation of competitive intellectual property objects, which directly affects the economic efficiency of R&D results, since intellectual property forms the bulk of the added value of high-tech products and provides revenue from the sale of patents and licenses. 
+
+The purpose of the thesis is to develop an organizational and economic mechanism for prospective patent research, which will increase the economic efficiency of fleet industry enterprises. Formed on the analysis of the features of the fleet management industry and the existing approaches to strategic planning of R&D, it is proposed to solve the scientific task of developing an organizational and economic mechanism for promising patent research as a tool for strategic planning of R&D's in fleet management companies, following technological diversification and marketing trends. The research aims not only connect intricate conceptual part of new potential business model approaches for the fleet management organizations but also to develop a forecast model by received of system-forming techniques for the organizational and economic mechanism of promising patent research.
+
+Fleet management is considering as an area of logistics and transportation utilities, where companies are retransferring a series of procedures to fleet companies, including integrated outsourcing, operational leasing, and the possibilities of corporate rental, maintenance, and insurance. Due to technological changes, innovative devices implementation, and a new paradigm in methodologies for solving route problems in vehicle transportation, there is a emerge need to formulate a retrospective analysis of current trends in fleet management. An efficient operational system is vital for each state of the company's implementation and development process, varying from fleet tracking software to management changes for reducing operational costs. Thus, by studying the specific cases of technology forecasting and modeling principles, this work investigates the use of these technologies in the management of workflow and services through patent data acquisition models.
+ 
+Therefore, to explain the issues mentioned before and achieve a complete understanding, there is an emerging necessity to answer the following questions. The overall process can be represented in 4 main research questions (RQ) as an analytical basis for the research; the following central questions are:
+
+**RQ1:**
+*What are the current tendencies for data-driven businesses (acquisition of data) and technology innovations in local solutions, transport management system (TMS) and fleet management (FM)?*
+
+**RQ2:**
+*How can companies, operating in the fleet management context benefit from utilizing existing datasets and enhance practical business model ecosystem trough benchmarking and patent analysis?*
+
+**RQ3:**
+*Based on patent analytics, in what areas a company should forecast and predict to see disruptive innovations in fleet management?*
+
+**RQ4:**
+*What are the main predictors and and how we can forecast indicators for future scenario changes in fleet management?*
+
+Technical literature, statistics, case studies, and patent information extracted from multiple sources were used for central research issues, defined goals, and duties. The publications of periodicals and magazines were implemented in order to provide topicality information highly.
+
+
+## Research outline {.unnumbered}
+
+## Research scope {.unnumbered}
+
+
+
